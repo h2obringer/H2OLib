@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
 
 namespace H2OLib.Extensions
 {
@@ -176,7 +177,7 @@ namespace H2OLib.Extensions
         }
 
         /// <summary>
-        /// Converts the specified object with an integer value to an enumeration member.
+        /// Converts the specified object with an integer or string value to an enumeration member.
         /// </summary>
         /// <typeparam name="E">enum type</typeparam>
         /// <param name="value"></param>
@@ -184,7 +185,15 @@ namespace H2OLib.Extensions
         /// <exception cref="ArgumentException"></exception>
         public static E ToEnum<E>(this object value)
         {
-            E result = (E)Enum.ToObject(typeof(E), value);
+            E result;
+            try
+            {
+                result = (E)Enum.ToObject(typeof(E), value);
+            }
+            catch(ArgumentException)
+            {
+                result = value.ToString()!.ToEnum<E>();
+            }
 
             AssertEnumExists(result, value);
 
