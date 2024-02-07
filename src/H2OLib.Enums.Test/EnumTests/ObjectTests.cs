@@ -1,4 +1,4 @@
-﻿using H2OLib.Extensions;
+﻿using H2OLib.Enums.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;

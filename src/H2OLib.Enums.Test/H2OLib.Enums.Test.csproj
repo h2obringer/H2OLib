@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\H2OLib\H2OLib.csproj" />
+    <ProjectReference Include="..\H2OLib\H2OLib.Enums.csproj" />
   </ItemGroup>
 
 </Project>

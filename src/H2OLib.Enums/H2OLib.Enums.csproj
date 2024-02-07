@@ -8,7 +8,14 @@
     <Authors>H2Obringer</Authors>
     <Description>A collection of utilities to ease day-to-day programming.</Description>
     <SignAssembly>True</SignAssembly>
-    <AssemblyOriginatorKeyFile>H2OLib.keypair.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>D:\dev\Workspaces\GitHub\H2OLib\H2OLib.keypair.snk</AssemblyOriginatorKeyFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/h2obringer/H2OLib</RepositoryUrl>
+    <PackageTags>Enum</PackageTags>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -22,5 +29,12 @@
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>

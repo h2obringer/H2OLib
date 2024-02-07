@@ -1,4 +1,5 @@
-using H2OLib.Extensions;
+using H2OLib.Enums.Attributes;
+using H2OLib.Enums.Extensions;
 
 namespace H2OLibTest.EnumTests
 {
@@ -12,27 +13,27 @@ namespace H2OLibTest.EnumTests
 
         public enum FruitsEnum
         {
-            [System.ComponentModel.Description(_APPLE_)]
+            [Tag(_APPLE_)]
             A = 1,
-            [System.ComponentModel.Description(_BANANA_)]
+            [Tag(_BANANA_)]
             B = 2,
-            [System.ComponentModel.Description(_COCONUT_)]
+            [Tag(_COCONUT_)]
             C = 3,
-            [System.ComponentModel.Description(_DEWBERRY_)]
+            [Tag(_DEWBERRY_)]
             D = 4
         }
 
         [TestMethod]
         public void Enum_Description_Test1()
         {
-            Console.WriteLine(FruitsEnum.A.GetDescription());
-            Assert.AreEqual(_APPLE_, FruitsEnum.A.GetDescription());
+            Console.WriteLine(FruitsEnum.A.GetTag());
+            Assert.AreEqual(_APPLE_, FruitsEnum.A.GetTag());
         }
 
         [TestMethod]
         public void Enum_Description_Test2()
         {
-            Assert.AreEqual(_COCONUT_, FruitsEnum.C.GetDescription());
+            Assert.AreEqual(_COCONUT_, FruitsEnum.C.GetTag());
         }
     }
 }

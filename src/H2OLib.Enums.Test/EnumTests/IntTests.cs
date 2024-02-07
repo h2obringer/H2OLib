@@ -1,4 +1,4 @@
-﻿using H2OLib.Extensions;
+﻿using H2OLib.Enums.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,27 +9,27 @@ using static H2OLibTest.EnumTests.EnumTest;
 namespace H2OLibTest.EnumTests
 {
     [TestClass]
-    public class LongTests
+    public class IntTests
     {
 
         [TestMethod]
-        public void Enum_Parsing_LongToEnum_Test1()
+        public void Enum_Parsing_IntToEnum_Test1()
         {
-            long test1 = 1;
+            int test1 = 1;
             Assert.AreEqual(FruitsEnum.A, test1.ToEnum<FruitsEnum>());
         }
 
         [TestMethod]
-        public void Enum_Parsing_LongToEnum_Test2()
+        public void Enum_Parsing_IntToEnum_Test2()
         {
-            long test1 = 2;
+            int test1 = 2;
             Assert.AreEqual(FruitsEnum.B, test1.ToEnum<FruitsEnum>());
         }
 
         [TestMethod]
-        public void Enum_Parsing_LongToEnum_ThrowsArgumentException()
+        public void Enum_Parsing_IntToEnum_ThrowsArgumentException()
         {
-            long test1 = 10;
+            int test1 = 10;
             Assert.ThrowsException<ArgumentException>(() => test1.ToEnum<FruitsEnum>());
         }
     }
