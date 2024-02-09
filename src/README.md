@@ -32,6 +32,7 @@ MetricUnits.Millimeters.GetTag();
 	
 MetricUnits.Centigrams.GetTag(); //(no description applied will output the enum member's name)
 //Centrigrams 
+}
 ```
 
 
